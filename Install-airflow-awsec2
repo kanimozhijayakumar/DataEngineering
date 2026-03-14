@@ -1,0 +1,38 @@
+Setting Up Apache Airflow on AWS EC2
+
+Follow these steps to set up Apache Airflow on an AWS EC2 instance:
+
+1. Launch an EC2 Instance:
+   - Launch a small or medium-sized EC2 instance.
+   - Ensure that port 8080 is enabled to access the Airflow web interface.
+   - Retrieve the admin password from the console or the `standalone_admin_password.txt` file.
+
+2. Install Dependency Packages:
+   sudo dnf -y update
+   sudo dnf install -y python3-pip
+   sudo dnf install -y awscli
+
+3. Create a Virtual Environment:
+   python3 -m venv airflow_venv
+   source airflow_venv/bin/activate
+   pip3 install pandas s3fs apache-airflow
+   airflow standalone
+
+(optional)
+4. Configure AWS Account Information:
+   aws configure
+   aws sts get-session-token
+
+5. Customize Airflow Configuration:
+   - Modify the `airflow.cfg` file to specify a different directory for storing DAGs or disable the loading of example DAGs.
+     load_examples = False
+     dags_folder = /home/ec2-user/airflow/dags
+
+6. Access Airflow Web Interface:
+   - Open a web browser and navigate to `http://aws-ec2-public-id:8080` to access the Airflow web interface.
+
+7. YouTube Tutorials:
+   - Complete Understanding of Airflow: https://www.youtube.com/watch?v=K9AnJ9_ZAXE&list=PLwFJcsJ61oujAqYpMp1kdUBcPG0sE0QMT
+   - Search YouTube for "Airflow Tutorial for Beginners - Full Course in 2 Hours 2022" for additional resources.
+
+For further assistance, contact: 6612881946 or email: sebastian_sa@hotmail.com
