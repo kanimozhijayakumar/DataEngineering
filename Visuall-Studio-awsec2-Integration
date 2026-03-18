@@ -1,0 +1,41 @@
+## Setting Up Visual Studio Code for SSH Access to AWS EC2 Instance
+
+### 1. Install Visual Studio Code (VSC):
+
+   Download and install Visual Studio Code from the [official website](https://code.visualstudio.com/download), ensuring it's installed on your laptop.
+
+### 2. Create an AWS EC2 Instance:
+
+   Set up an AWS EC2 instance and open port 22 to enable SSH access.
+
+### 3. Install "Remote SSH" Extension:
+
+   - Open Visual Studio Code.
+   - Go to the Extensions view by clicking on the square icon on the sidebar or pressing `Ctrl+Shift+X`.
+   - Search for "Remote - SSH" extension and install it.
+
+### 4. Configure SSH Connection:
+
+   - Press `Ctrl+Shift+P` to open the command palette.
+   - Type "Remote-SSH: Open Configuration File" and press Enter.
+   - This will take you to the folder where SSH configurations are stored (e.g., `/Users/your_username/.ssh` on macOS).
+   - Edit the `config` file and add the following configuration:
+
+   ```ssh
+   Host my-ec2
+     HostName 54.184.85.157
+     IdentityFile "/Users/ssantiago/Downloads/2024-oregan.pem"
+     User ec2-user
+     Port 22
+
+Connect to EC2 Instance:
+Open Visual Studio Code.
+Press Ctrl+Shift+P to open the command palette.
+Type "Remote-SSH: Connect to Host..." and select the host you defined in the config file (e.g., "my-ec2").
+Visual Studio Code will connect to your EC2 instance via SSH.
+Additional Resources:
+Check out this YouTube video for a visual guide on setting up Visual Studio Code with SSH.
+
+Happy coding with Visual Studio Code and AWS EC2!
+
+Youtube : https://www.youtube.com/watch?v=sQQjMnEkGjs&t=1224s
