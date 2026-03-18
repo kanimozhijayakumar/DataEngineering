@@ -1,0 +1,28 @@
+## Setting up GitHub Integration with Visual Studio Code
+
+### 1. Install Visual Studio Code:
+
+   Download and install Visual Studio Code from the [official website](https://code.visualstudio.com/download), choosing the appropriate version for your operating system.
+
+### 2. Install GitHub Extensions:
+
+   - **GitHub Pull Requests:** Enables you to review and manage GitHub pull requests directly from Visual Studio Code.
+   - **GitHub Codespaces:** Provides a cloud-hosted development environment directly from your repository.
+   - **GitHub Repositories:** Allows you to browse and clone GitHub repositories within Visual Studio Code.
+
+   You can install these extensions by following these steps:
+   - Open Visual Studio Code.
+   - Navigate to the Extensions view by clicking on the square icon on the sidebar or pressing `Ctrl+Shift+X`.
+   - Search for each extension by name and click the Install button next to each one.
+
+### 3. Authorize GitHub:
+
+   - Press `Ctrl+Shift+P` to open the command palette.
+   - Type "GitHub: Sign in" and press Enter.
+   - Follow the prompts to authenticate with your GitHub account.
+
+### 4. Enjoy GitHub Integration:
+
+   With the GitHub extensions installed and authorized, you can seamlessly interact with GitHub repositories, pull requests, and codespaces directly from Visual Studio Code.
+
+Happy coding with GitHub and Visual Studio Code!
